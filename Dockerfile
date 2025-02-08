@@ -60,11 +60,11 @@ RUN set -x; \
 # Install Libgtk, webkit and NSIS
 RUN dpkg --add-architecture amd64 \
   && apt-get -qq update \
-  && apt-get -qq install -y libgtk-3-dev:amd64 libwebkit2gtk-4.0-dev:amd64
+  && apt-get -qq install -y libgtk-3-dev:amd64 libwebkit2gtk-4.1-dev:amd64
 
 RUN dpkg --add-architecture arm64 \
   && apt-get -qq update \
-  && apt-get -qq install -y libgtk-3-dev:arm64 libwebkit2gtk-4.0-dev:arm64
+  && apt-get -qq install -y libgtk-3-dev:arm64 libwebkit2gtk-4.1-dev:arm64
 
 ARG NODE_MAJOR_VERSION=20
 
