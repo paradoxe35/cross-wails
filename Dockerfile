@@ -25,10 +25,10 @@
 # https://github.com/goreleaser/goreleaser-cross-toolchains/blob/main/Dockerfile
 
 
-FROM debian:bullseye as builder
+FROM debian:bookworm as builder
 
-LABEL maintainer="Ibrahim Najjar <https://github.com/abjrcode/>"
-LABEL "org.opencontainers.image.source"="https://github.com/abjrcode/cross-wails"
+LABEL maintainer="Paradoxe Ngwasi <https://github.com/abjrcode/>"
+LABEL "org.opencontainers.image.source"="https://github.com/paradoxe35/cross-wails"
 
 ENV DEBIAN_FRONTEND=noninteractive
 ARG DPKG_ARCH="amd64 arm64"
