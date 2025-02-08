@@ -31,8 +31,8 @@ LABEL maintainer="Paradoxe Ngwasi <https://github.com/abjrcode/>"
 LABEL "org.opencontainers.image.source"="https://github.com/paradoxe35/cross-wails"
 
 ENV DEBIAN_FRONTEND=noninteractive
-ARG DPKG_ARCH="amd64 arm64"
-ARG CROSSBUILD_ARCH="amd64 arm64"
+ARG DPKG_ARCH="amd64"
+ARG CROSSBUILD_ARCH="amd64"
 ARG MINGW_VERSION=20230130
 ARG MINGW_HOST="ubuntu-18.04"
 
@@ -58,13 +58,9 @@ RUN set -x; \
   && ln -snf $(pwd)/llvm-mingw-${MINGW_VERSION}-ucrt-${MINGW_HOST}-${MINGW_ARCH} /llvm-mingw
 
 # Install Libgtk, webkit and NSIS
-RUN dpkg --add-architecture amd64 \
-  && apt-get -qq update \
-  && apt-get -qq install -y libgtk-3-dev:amd64 libwebkit2gtk-4.1-dev:amd64
+RUN apt-get -qq update \
+  && apt-get -qq install -y libgtk-3-dev libwebkit2gtk-4.1-dev
 
-RUN dpkg --add-architecture arm64 \
-  && apt-get -qq update \
-  && apt-get -qq install -y libgtk-3-dev:arm64 libwebkit2gtk-4.0-dev:arm64
 
 ARG NODE_MAJOR_VERSION=20
 
