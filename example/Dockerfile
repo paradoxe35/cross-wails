@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/abjrcode/cross-wails:v2.6.0
+ARG BASE_IMAGE=ghcr.io/paradoxe35/cross-wails:v2.6.0
 
 FROM ${BASE_IMAGE} as builder
 

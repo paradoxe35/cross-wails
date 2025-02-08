@@ -27,7 +27,7 @@
 
 FROM debian:bookworm AS builder
 
-LABEL maintainer="Paradoxe Ngwasi <https://github.com/abjrcode/>"
+LABEL maintainer="Paradoxe Ngwasi <https://github.com/paradoxe35/>"
 LABEL "org.opencontainers.image.source"="https://github.com/paradoxe35/cross-wails"
 
 ENV DEBIAN_FRONTEND=noninteractive
